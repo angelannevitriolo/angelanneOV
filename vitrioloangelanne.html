@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Labyu</title>
+    <style>
+        
+        body {
+            font-family: sans-serif;
+            margin: 0;
+        }
+        header {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        nav {
+            background-color: pink;
+            padding: 0.5em 0;
+            text-align: center; 
+        }
+        nav button {
+            background-color: white ;
+            border: none;
+            color: black;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px; 
+        }
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 1em;
+        }
+        .column {
+            width: 50%;
+            padding: 1em;
+            box-sizing: border-box;
+        }
+        .info-section {
+            display: none; 
+            padding: 1em;
+            border: 1px solid #ccc;
+            margin-top: 1em;
+            text-align: center; 
+        }
+        .info-section.show {
+            display: block; 
+        }
+        .info-section img {
+            max-width: 80%; 
+            height: auto;     
+            margin-bottom: 1em; 
+        }
+        footer {
+            background-color: black;
+            color: pink;
+            text-align: center;
+            padding: 0.5em 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>NAMASTE</h1>
+        <p>Mabuhay!Bienvenidos a mi vida.</p>
+    </header>
+    <nav>
+        <button onclick="toggleInfo('info1')">About Me</button>
+        <button onclick="toggleInfo('info2')">My Goldies</button>
+        <button onclick="toggleInfo('info3')">School</button>
+        <button onclick="toggleInfo('info4')">Pet</button>
+    </nav>
+    <section>
+        <div class="info-section" id="info1">
+            <img src="1709882470213.jpg" alt="About Me">
+            <h2>About Me</h2>
+            <p>Namaste! Allow me to Introduced myself, I am Angel Anne O. Vitriolo and I am 19yrs old. I lived in Bibiclat, Aliaga, Nueva Ecija.</p>
+        </div>
+        <div class="info-section" id="info2">
+            <img src="Messenger_creation_0FA63ECB-452E-4F40-971A-CAF6F0E59C3F.jpeg" alt="My Goldies">
+            <h2>My Goldies</h2>
+            <p> Namaste!This is my GOLDIES!We've been inseparable since October haha. They are one of the most positive people I know, and I'm so lucky to have them in my life.ILYSM♡</p>
+        </div>
+        <div class="info-section" id="info3">
+            <img src="20250205_064225.jpg" alt="School">
+            <h2>School</h2>
+            <p>College for Research and Technology of Cabanatuan (CRT) started as a computer school and has been known to be the first computer school in Nueva Ecija. It pioneered in applying a different approach in education like embedding competency courses to baccalaureate course that even the more established colleges and universities followed. After the main campus was established in 1988 at Cabanatuan City, a strategic plan was laid-out by its president, Dr. Reynato C. Arimbuyutan to establish campuses in all of the four districts of Nueva Ecija. In this way, it was envisioned to contend with the growing desire of students to study in their places of abode but with the quality of education comparable to its main campus. The first Branch established after its Main Campus was the Gapan Branch which opened in 1997. Currently, it is located at Abad Santos Street, Barangay Santo Nino, Gapan City with the hope that the college-owned campus will be built on its lot along Maharlika Highway, Bayanihan, Gapan City in the near future. After three years Guimba Campus was built, located at Parairo St., Saranay Dist., Guimba, Nueva Ecija and followed by San Jose Campus located at Sanchez St., San Jose City. The Gapan, Guimba and San Jose branches are Extension Campuses of the Main Branch that offers two years Technical Courses preparatory to a degree course applying the ladderized education approach.   <or></or></p>
+        </div>
+        <div class="info-section" id="info4">
+            <img src="received_468672455672120.jpeg" alt="Pet">
+            <h2>My Pet</h2>
+            <p>Say Namaste to myLALAbs! This is my charming dog that brings endless joy to our lives.  With her big, expressive eyes and wagging tail, she's a constant source of our happiness.  We're so lucky to have her.  </p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy;Angel Anne O. Vitriolo</p>
+    </footer>
+    <script>
+        function toggleInfo(sectionId) {
+            
+            const infoSections = document.querySelectorAll('.info-section');
+            infoSections.forEach(section => section.classList.remove('show'));
+
+            const section = document.getElementById(sectionId);
+            section.classList.add('show');
+        }
+    </script>
+</body>
+</html>
